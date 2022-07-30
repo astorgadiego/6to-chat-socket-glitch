@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="/socket.io/socket.io.js" ></script>  <!--DEL LADO DEL CLIENTE  -->
+
+    <title>Document</title>
+</head>
+<body>
+
+     <h1>Aplicacion de Chats</h1>  <!--VAMOS A IMPRIMIR LOS MENSAJES RECIBIDOS EN PANTALLA -->
+     <div id="mensajesrecibidos" ></div>
+
+     <!-- EL INPUT TIPO SUBMIT HACE QUE AL APRETAR ENVIAR SE EJECUTA LA ACCION "ONSUBMIT". Y CUANDO SE EJECUTE ESA ACCION VAMOS A 
+     DEVOLVER EL addMessage(this) -->
+    <form onsubmit= "addMessage(this)">
+        <input type="text" id="username" placeholder="Tu Nombre">
+        <input type="text" id="texto" placeholder="Cuéntanos algo...">
+        <input type="submit" value="Enviar">
+    </form>
+
+</body>
+<script src="/main.js" ></script> <!--DEL LADO DEL SERVIDOR  -->
+</html>
